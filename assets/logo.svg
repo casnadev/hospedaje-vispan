@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" role="img" aria-label="Vispán Hospedaje">
+  <path d="M8 46 L30 20 L38 28 L46 18 L70 46 Z" fill="#8c9a3b"/>
+  <path d="M36 34 L46 22 L58 36 Z" fill="#a9b552" opacity=".85"/>
+  <rect x="44.6" y="6" width="2.8" height="12" rx="1" fill="#2a2f2b"/>
+  <rect x="41" y="9.4" width="10" height="2.6" rx="1" fill="#2a2f2b"/>
+  <text x="80" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#1f63a8">Vispán</text>
+  <text x="81" y="56" font-family="Poppins, Arial, sans-serif" font-size="9.5" letter-spacing="4.2" fill="#4b544d">HOSPEDAJE</text>
+</svg>
