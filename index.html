@@ -97,7 +97,7 @@
       <h2 class="h2">Listo, <strong>a cualquier hora</strong></h2>
     </div>
     <div class="room reveal">
-      <button class="room-photo" data-open="habitacion-01" aria-label="Ver fotos de las habitaciones">
+      <button class="room-photo" data-open="habitacion" aria-label="Ver fotos de las habitaciones">
         <img src="assets/galeria/habitacion-01.webp" alt="Habitación con cama de 2 plazas" loading="lazy">
         <span><i class="ph ph-images"></i> Ver habitaciones</span>
       </button>
@@ -317,17 +317,18 @@
   }
   function resetZoom() { z = { s: 1, x: 0, y: 0 }; apply(); }
   function show(i) {
-    cur = (i + FOTOS.length) % FOTOS.length;
-    var f = FOTOS[cur];
+    cur = (i + LISTA.length) % LISTA.length;
+    var f = LISTA[cur];
     lbImg.onload = layout;
     lbImg.src = "assets/galeria/" + f[0] + ".webp"; lbImg.alt = f[1];
     if (lbImg.complete) layout();
     document.getElementById("lbTitle").textContent = f[1];
     document.getElementById("lbText").innerHTML = md(f[2]);
-    document.getElementById("lbCount").textContent = (cur + 1) + " / " + FOTOS.length;
-    new Image().src = "assets/galeria/" + FOTOS[(cur + 1) % FOTOS.length][0] + ".webp"; // precarga la siguiente
+    document.getElementById("lbCount").textContent = (cur + 1) + " / " + LISTA.length;
+    new Image().src = "assets/galeria/" + LISTA[(cur + 1) % LISTA.length][0] + ".webp"; // precarga la siguiente
   }
-  function openLb(i) { lb.classList.add("open"); document.body.style.overflow = "hidden"; show(i); }
+  var LISTA = FOTOS; // fotos que recorre el visor (todas o solo habitaciones)
+  function openLb(i, lista) { LISTA = lista || FOTOS; lb.classList.add("open"); document.body.style.overflow = "hidden"; show(i); }
   function closeLb() { lb.classList.remove("open"); document.body.style.overflow = ""; }
   document.getElementById("lbClose").onclick = closeLb;
   document.getElementById("lbPrev").onclick = function () { show(cur - 1); };
@@ -392,7 +393,8 @@
   });
 
   document.querySelectorAll("[data-open]").forEach(function (b) {
-    b.onclick = function () { openLb(FOTOS.findIndex(function (f) { return f[0] === b.dataset.open; })); };
+    // abre solo las fotos cuyo nombre empieza con data-open (ej. "habitacion")
+    b.onclick = function () { openLb(0, FOTOS.filter(function (f) { return f[0].indexOf(b.dataset.open) === 0; })); };
   });
 
   // ----- Reserva rápida por WhatsApp -----
