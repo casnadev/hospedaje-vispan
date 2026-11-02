@@ -1,0 +1,18 @@
+HOSPEDAJE VISPÁN · cómo actualizar la web
+=========================================
+
+1. DATOS DE CONTACTO
+   En index.html, al inicio del <script> (casi al final del archivo):
+   var WHATSAPP = "51999046874";   <- cambiar por el número real (51 + 9 dígitos, sin espacios)
+
+2. AGREGAR O CAMBIAR UNA FOTO DE LA GALERÍA
+   a) Sube a assets/galeria/ dos archivos con el mismo nombre:
+      nombre.webp       (grande, 1600 px en el lado más largo)
+      nombre-mini.webp  (miniatura, 800 px)
+   b) En index.html, en la lista FOTOS, agrega una línea en el orden en que quieras que aparezca:
+      ["nombre", "Título", "Una frase corta con **palabras en negrita**."],
+
+3. VIDEO DE PORTADA
+   assets/video/hero-movil.mp4 + hero-movil.jpg  (celular, vertical)
+   assets/video/hero-pc.mp4    + hero-pc.jpg     (PC, horizontal)
+   Para cambiarlo, reemplaza esos archivos con el mismo nombre.
