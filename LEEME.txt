@@ -3,7 +3,7 @@ HOSPEDAJE VISPÁN · cómo actualizar la web
 
 1. DATOS DE CONTACTO
    En index.html, al inicio del <script> (casi al final del archivo):
-   var WHATSAPP = "51949243882";   <- WhatsApp de reservas (51 + 9 dígitos, sin espacios)
+   (Reservas solo por teléfono fijo (01) 589 0968; sin WhatsApp)
 
 2. AGREGAR O CAMBIAR UNA FOTO DE LA GALERÍA
    a) Sube a assets/galeria/ dos archivos con el mismo nombre:
