@@ -22,7 +22,7 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -82,7 +82,6 @@
   <div class="container hero-content">
     <span class="badge"><i></i> Abierto · Atención 24 horas</span>
     <h1>Descansa en la <strong>campiña</strong> de Santa María</h1>
-    <a class="btn btn-primary btn-lg hero-call" href="tel:+5115890968"><i class="ph ph-phone"></i> Reserva al (01) 589 0968</a>
   </div>
   <a href="#servicios" class="scroll-hint" aria-label="Ver más"><i class="ph ph-caret-down"></i></a>
 </section>
@@ -101,19 +100,19 @@
 
 <!-- ============ NOSOTROS ============ -->
 <section class="section" id="nosotros">
-  <div class="container about reveal">
-    <h2 class="h2"><strong>Nosotros</strong></h2>
-    <div class="about-text">
-      <h3>¿Quiénes somos?</h3>
-      <p>Somos un <b>hospedaje familiar</b> en la campiña de Santa María, a pocos minutos de Huacho. Recibimos a viajeros, trabajadores y familias que buscan un lugar <b>tranquilo, limpio y seguro</b> para descansar.</p>
-      <p>Nuestras habitaciones tienen baño propio, agua caliente y TV cable, y contamos con una <b>amplia cochera dentro del local</b> para que tu vehículo quede protegido. Te atendemos <b>las 24 horas</b>: llámanos y te esperamos.</p>
-    </div>
-  </div>
+  <div class="container reveal"><h2 class="h2 about-title"><strong>Nosotros</strong></h2></div>
   <div class="container carousel reveal">
     <div class="track" id="track"></div>
     <div class="arrows">
       <button class="arrow" id="prev" aria-label="Anterior"><i class="ph ph-caret-left"></i></button>
       <button class="arrow" id="next" aria-label="Siguiente"><i class="ph ph-caret-right"></i></button>
+    </div>
+  </div>
+  <div class="container about reveal">
+    <div class="about-text">
+      <h3>¿Quiénes somos?</h3>
+      <p>Somos un <b>hospedaje familiar</b> en la campiña de Santa María, a pocos minutos de Huacho. Recibimos a viajeros, trabajadores y familias que buscan un lugar <b>tranquilo, limpio y seguro</b> para descansar.</p>
+      <p>Nuestras habitaciones tienen baño propio, agua caliente y TV cable, y contamos con una <b>amplia cochera dentro del local</b> para que tu vehículo quede protegido. Te atendemos <b>las 24 horas</b>: llámanos y te esperamos.</p>
     </div>
   </div>
 </section>
@@ -248,6 +247,12 @@
     if (ahorro) { v.removeAttribute("autoplay"); return; } // solo la foto
     v.src = vertical ? v.dataset.movil : v.dataset.pc;
     v.play().catch(function () {});
+    // si se gira el celular o cambia el tamaño de la ventana, carga la versión correcta
+    matchMedia("(max-aspect-ratio: 1/1)").addEventListener("change", function (e) {
+      v.poster = e.matches ? v.dataset.movilPoster : v.dataset.pcPoster;
+      v.src = e.matches ? v.dataset.movil : v.dataset.pc;
+      v.play().catch(function () {});
+    });
     // pausa el video cuando no se ve (ahorra batería)
     new IntersectionObserver(function (e) { e[0].isIntersecting ? v.play().catch(function () {}) : v.pause(); }).observe(v);
   })();
