@@ -22,7 +22,7 @@
     "name": "Hospedaje Vispán",
     "image": "https://hospedajevispan.com/assets/galeria/fachada.webp",
     "url": "https://hospedajevispan.com/",
-    "telephone": "+51 1 5890968",
+    "telephone": ["+51 1 5890968", "+51 949 243 882"],
     "priceRange": "Precios accesibles",
     "address": { "@type": "PostalAddress", "streetAddress": "Av. 28 de Julio 1021", "addressLocality": "Santa María", "addressRegion": "Huaura, Lima", "addressCountry": "PE" },
     "openingHours": "Mo-Su 00:00-23:59",
@@ -55,9 +55,9 @@
 <!-- ============ PORTADA (video) ============ -->
 <section class="hero" id="inicio">
   <video class="hero-media" id="heroVideo" muted loop playsinline autoplay preload="none" aria-hidden="true"
-         poster="assets/video/hero-pc.jpg?v=2"
-         data-pc="assets/video/hero-pc.mp4?v=2" data-pc-poster="assets/video/hero-pc.jpg?v=2"
-         data-movil="assets/video/hero-movil.mp4?v=2" data-movil-poster="assets/video/hero-movil.jpg?v=2"></video>
+         poster="assets/video/hero-pc.jpg?v=3"
+         data-pc="assets/video/hero-pc.mp4?v=3" data-pc-poster="assets/video/hero-pc.jpg?v=3"
+         data-movil="assets/video/hero-movil.mp4?v=3" data-movil-poster="assets/video/hero-movil.jpg?v=3"></video>
   <div class="container hero-content">
     <span class="badge"><i></i> Abierto · Atención 24 horas</span>
     <h1>Descansa en la <strong>campiña</strong> de Santa María</h1>
@@ -125,7 +125,7 @@
           </div>
           <button type="submit" class="btn book-btn"><i class="ph ph-whatsapp-logo"></i> Reservar por WhatsApp</button>
         </form>
-        <div class="tel"><i class="ph ph-phone"></i> O llámanos: (01) 589 0968</div>
+        <div class="tel"><i class="ph ph-phone"></i> <span>O llámanos: <a href="tel:+5115890968">(01) 589 0968</a> <span class="nw">· <a href="tel:+51949243882">949 243 882</a></span></span></div>
       </div>
     </div>
   </div>
@@ -141,7 +141,7 @@
       <div class="loc-card">
         <div class="loc-row"><span class="ic"><i class="ph ph-map-pin"></i></span><div><b>Av. 28 de Julio 1021</b><span>Esquina con Av. San Martín · Santa María, Huaura</span></div></div>
         <div class="loc-row"><span class="ic"><i class="ph ph-navigation-arrow"></i></span><div><b>Cerca de Makro Huacho</b><span>Plus Code WC49+76H</span></div></div>
-        <div class="loc-row"><span class="ic"><i class="ph ph-phone"></i></span><div><b>(01) 589 0968</b><span>Reservas las 24 horas</span></div></div>
+        <div class="loc-row"><span class="ic"><i class="ph ph-phone"></i></span><div><b><a href="tel:+5115890968">(01) 589 0968</a> · <a href="tel:+51949243882">949 243 882</a></b><span>Llamadas y reservas las 24 horas</span></div></div>
         <a class="btn btn-waze" data-waze target="_blank" rel="noopener"><i class="ph ph-steering-wheel"></i> Llegar con Waze</a>
       </div>
       <div class="map">
@@ -214,7 +214,7 @@
 
 <script>
   // ===== Configuración (cambiar por los datos reales) =====
-  var WHATSAPP = "51999046874";
+  var WHATSAPP = "51949243882";
   var DESTINO = "Hospedaje Vispan, Av. 28 de Julio 1021, Santa María, Huaura";
   var md = function (t) { return t.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>"); };
 
