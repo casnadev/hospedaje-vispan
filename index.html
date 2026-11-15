@@ -22,7 +22,7 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -236,6 +236,22 @@
   document.querySelectorAll("[data-waze]").forEach(function (a) {
     a.href = "https://waze.com/ul?q=" + encodeURIComponent("Av. 28 de Julio 1021, Santa María, Huaura") + "&navigate=yes";
   });
+
+  // ----- Enlaces internos sin "#" en la dirección -----
+  (function () {
+    var limpiar = function () { if (location.hash) history.replaceState(null, "", location.pathname + location.search); };
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        var id = a.getAttribute("href").slice(1), t = document.getElementById(id);
+        if (!t) return;
+        e.preventDefault();
+        if (id === "inicio") scrollTo({ top: 0, behavior: "smooth" });
+        else t.scrollIntoView({ behavior: "smooth", block: "start" });
+        limpiar();
+      });
+    });
+    addEventListener("load", function () { setTimeout(limpiar, 400); });
+  })();
 
   // ----- Video de portada: vertical en celular, horizontal en PC -----
   (function () {
