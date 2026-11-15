@@ -282,3 +282,5 @@ button { font: inherit; color: inherit; }
 .credit { text-align: center; font-size: 12.5px; color: #98a39c; padding: 14px 0 6px; }
 .credit .ph-fill { color: #e5484d; vertical-align: -2px; }
 .credit b { color: #cfd6d1; font-weight: 600; }
+button.reclamos { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.25); -webkit-appearance: none; appearance: none; transition: background .2s, border-color .2s; }
+button.reclamos:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.45); }

@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hospedajevispan.com/</loc><lastmod>2026-11-14</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://hospedajevispan.com/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/01-entrada.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/02-fachada.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/03-pasillo.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/04-cochera.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/05-cochera-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/06-patio.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/07-habitacion-espejo.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/08-habitacion-ladrillo.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/09-habitacion-mesa.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/10-habitacion-tv.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/11-habitacion-ventilador.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/12-bano.webp</image:loc></image:image>
+    <image:image><image:loc>https://hospedajevispan.com/assets/galeria/13-ducha.webp</image:loc></image:image>
+  </url>
 </urlset>
